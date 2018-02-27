@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/component/pages/listen/listen",
+    "pages/component/pages/voice/voice",
+    "pages/component/pages/sentence/sentence",
+    "pages/component/pages/system/system"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#7fc7d5",
+    "navigationBarBackgroundColor": "#7fc7d5",
+    "navigationBarTitleText": "第六音",
+    "navigationBarTextStyle": "black"
+  }
+}

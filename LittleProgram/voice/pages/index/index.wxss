@@ -1,0 +1,56 @@
+/**index.wxss**/
+@import "../common/index.wxss";
+.index{
+  background: #7fc7d5;
+  height: 100%;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-part1{
+  width: 300rpx;
+  height: 250rpx;
+}
+
+.container-part2{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.container-part3{
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.container-part4{
+  width: 300rpx;
+  height: 250rpx;
+}
+
+.header-desc {
+  margin-top: 20rpx;
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.header-logo {
+  width: 86rpx;
+  height: 86rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

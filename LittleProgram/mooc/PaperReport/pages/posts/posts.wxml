@@ -1,0 +1,44 @@
+<!--pages/posts/posts.wxml-->
+<view>
+  <swiper indicator-dots='true' autoplay='true' interval='5000'>
+    <swiper-item>
+      <image src='/images/post/post-1.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/post/post-2.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/post/post-3.png'></image>
+    </swiper-item>    
+  </swiper>
+  <view class='post-container'>
+    <view class='post-author-data'>
+      <image class='post-author' src='/images/avater/1.png'></image>
+      <text class='post-data'>Nov 25 2017</text>
+    </view>
+    <text class='post-title'>title</text>
+    <image class='post-image' src='/images/post/crab.png'></image>
+    <text class='post-content'>more text</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='/images/icon/chat.png'></image>
+      <text class='post-like-font'>89</text>
+      <image class='post-like-image' src='/images/icon/view.png'></image>
+      <text class='post-like-font'>67</text>
+    </view>
+  </view>
+  <view class='post-container'>
+    <view class='post-author-data'>
+      <image class='post-author' src='/images/avater/1.png'></image>
+      <text class='post-data'>Nov 25 2017</text>
+    </view>
+    <text class='post-title'>title2</text>
+    <image class='post-image' src='/images/post/crab.png'></image>
+    <text class='post-content'>more text2</text>
+    <view class='post-like'>
+      <image class='post-like-image' src='/images/icon/chat.png'></image>
+      <text class='post-like-font'>89</text>
+      <image class='post-like-image' src='/images/icon/view.png'></image>
+      <text class='post-like-font'>67</text>
+    </view>
+  </view>
+</view>

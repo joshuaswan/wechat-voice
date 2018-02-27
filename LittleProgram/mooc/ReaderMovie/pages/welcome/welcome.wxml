@@ -1,0 +1,10 @@
+<!-- wxml是编写小程序骨架的文件 -->
+<!-- <div> -->
+<view class='container'>
+  <!-- <text>hello</text> -->
+  <image class='user_avatar' src='/images/logo.png'></image>
+  <text class='user_name'><text style='color:red'>Hello</text> Joshua</text>
+  <view class='moto_container'>
+    <text class='moto'>start the little program</text>
+  </view>
+</view>

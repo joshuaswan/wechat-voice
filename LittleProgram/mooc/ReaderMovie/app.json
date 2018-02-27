@@ -1,0 +1,9 @@
+{
+    "window": {
+      "navigationBarTitleText": "ReaderMovie",
+      "navigationBarBackgroundColor": "#b3d4db"
+    },
+  "pages": [
+    "pages/welcome/welcome"
+  ]
+}
