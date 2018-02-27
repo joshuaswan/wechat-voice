@@ -13,17 +13,17 @@
   </swiper>
   <view class='post-container'>
     <view class='post-author-data'>
-      <image class='post-author' src='/images/avater/1.png'></image>
-      <text class='post-data'>Nov 25 2017</text>
+      <image class='post-author' src='{{author_img}}'></image>
+      <text class='post-data'>{{date}}</text>
     </view>
-    <text class='post-title'>title</text>
-    <image class='post-image' src='/images/post/crab.png'></image>
-    <text class='post-content'>more text</text>
+    <text class='post-title'>{{title}}</text>
+    <image class='post-image' src='{{post_img}}'></image>
+    <text class='post-content'>{{content}}</text>
     <view class='post-like'>
       <image class='post-like-image' src='/images/icon/chat.png'></image>
-      <text class='post-like-font'>89</text>
+      <text class='post-like-font'>{{collect_num}}</text>
       <image class='post-like-image' src='/images/icon/view.png'></image>
-      <text class='post-like-font'>67</text>
+      <text class='post-like-font'>{{view_num}}</text>
     </view>
   </view>
   <view class='post-container'>
