@@ -1,6 +1,6 @@
 <!--pages/posts/posts.wxml-->
 <view>
-  <swiper indicator-dots='true' autoplay='true' interval='5000'>
+  <swiper vertical='{{false}}' indicator-dots='true' autoplay='true' interval='5000'>
     <swiper-item>
       <image src='/images/post/post-1.png'></image>
     </swiper-item>
@@ -11,34 +11,21 @@
       <image src='/images/post/post-3.png'></image>
     </swiper-item>    
   </swiper>
-  <view class='post-container'>
-    <view class='post-author-data'>
-      <image class='post-author' src='{{author_img}}'></image>
-      <text class='post-data'>{{date}}</text>
+  <block wx:for="{{posts_key}}" wx:for-item="item">
+    <view class='post-container'>
+      <view class='post-author-data'>
+        <image class='post-author' src='{{item.author_img}}'></image>
+        <text class='post-data'>{{item.date}} {{index}}</text>
+      </view>
+      <text class='post-title'>{{item.title}}</text>
+      <image class='post-image' src='{{item.post_img}}'></image>
+      <text class='post-content'>{{item.content}}</text>
+      <view class='post-like'>
+        <image class='post-like-image' src='/images/icon/chat.png'></image>
+        <text class='post-like-font'>{{item.collect_num}}</text>
+        <image class='post-like-image' src='/images/icon/view.png'></image>
+        <text class='post-like-font'>{{item.view_num}}</text>
+      </view>
     </view>
-    <text class='post-title'>{{title}}</text>
-    <image class='post-image' src='{{post_img}}'></image>
-    <text class='post-content'>{{content}}</text>
-    <view class='post-like'>
-      <image class='post-like-image' src='/images/icon/chat.png'></image>
-      <text class='post-like-font'>{{collect_num}}</text>
-      <image class='post-like-image' src='/images/icon/view.png'></image>
-      <text class='post-like-font'>{{view_num}}</text>
-    </view>
-  </view>
-  <view class='post-container'>
-    <view class='post-author-data'>
-      <image class='post-author' src='/images/avater/1.png'></image>
-      <text class='post-data'>Nov 25 2017</text>
-    </view>
-    <text class='post-title'>title2</text>
-    <image class='post-image' src='/images/post/crab.png'></image>
-    <text class='post-content'>more text2</text>
-    <view class='post-like'>
-      <image class='post-like-image' src='/images/icon/chat.png'></image>
-      <text class='post-like-font'>89</text>
-      <image class='post-like-image' src='/images/icon/view.png'></image>
-      <text class='post-like-font'>67</text>
-    </view>
-  </view>
+  </block>
 </view>

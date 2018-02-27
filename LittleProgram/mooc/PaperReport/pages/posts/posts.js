@@ -20,16 +20,31 @@ Page({
    */
   onLoad: function (options) {
     console.log("onload");
-    var post_content1={
-      date:"Sep 18 2017",
-        title:"title 01",
-        post_img:"/images/post/crab.png",
-        content:"this is the first post content",
-        view_num:"112",
-        collect_num:"98",
-        author_img:"/images/avatar/1.png"
-    };
-    this.setDate(post_content1);
+    var posts_content=[
+      {
+        date: "Sep 18 2017",
+        title: "title 01",
+        post_img: "/images/post/crab.png",
+        author_img: "/images/avatar/1.png",
+        img_condition: true,
+        content: "this is the first post content",
+        view_num: "112",
+        collect_num: "98",
+      },
+      {
+        date: "Sep 18 2017",
+        title: "title 01",
+        post_img: "/images/post/crab.png",
+        author_img: "/images/avatar/1.png",
+        img_condition: true,
+        content: "this is the first post content",
+        view_num: "112",
+        collect_num: "98",
+      }
+    ];
+    this.setData({
+      posts_key:posts_content
+    });
   },
 
   /**
