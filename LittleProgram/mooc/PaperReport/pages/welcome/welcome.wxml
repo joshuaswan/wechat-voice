@@ -1,2 +1,10 @@
-<!--pages/welcome/welcome.wxml-->
-<text>pages/welcome/welcome.wxml</text>
+<!-- wxml是编写小程序骨架的文件 -->
+<!-- <div> -->
+<view class='container'>
+  <!-- <text>hello</text> -->
+  <image class='user_avatar' src='/images/avatar/5.png'></image>
+  <text class='user_name'><text style='color:red'>Hello</text> Joshua</text>
+  <view class='moto_container' bindtap='onTap'>
+    <text class='moto'>start the little program</text>
+  </view>
+</view>

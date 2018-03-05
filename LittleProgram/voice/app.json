@@ -2,10 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/component/pages/listen/listen",
-    "pages/component/pages/voice/voice",
-    "pages/component/pages/sentence/sentence",
-    "pages/component/pages/system/system"
+    "pages/voiceSquare/voiceSquare",
+    "pages/dubRoom/dubRoom",
+    "pages/dubLesson/dubLesson",
+    "pages/practicingRoom/practicingRoom",
+    "pages/myVoice/myVoice",
+    "pages/myMaterial/myMaterial"
   ],
   "window": {
     "backgroundTextStyle": "light",

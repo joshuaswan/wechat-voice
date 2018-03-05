@@ -1,49 +1,31 @@
 // pages/posts/posts.js
+var postsData = require("../../data/posts-data.js")
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // date:"Nov 18 2017",
-    // title: "title in js"
+
   },
 
-  process: function(){
-    // var date = "Nov 18 2017";
-    // var date_ele = document.getElementsById
-  }
-  ,
+  onPostTap:function(event){
+    var postId = event.currentTarget.dataset.postid;
+    console.log("onPostTab " + postId);
+    wx.navigateTo({
+      url: 'post-detail/post-detail?id=' + postId,
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("onload");
-    var posts_content=[
-      {
-        date: "Sep 18 2017",
-        title: "title 01",
-        post_img: "/images/post/crab.png",
-        author_img: "/images/avatar/1.png",
-        img_condition: true,
-        content: "this is the first post content",
-        view_num: "112",
-        collect_num: "98",
-      },
-      {
-        date: "Sep 18 2017",
-        title: "title 01",
-        post_img: "/images/post/crab.png",
-        author_img: "/images/avatar/1.png",
-        img_condition: true,
-        content: "this is the first post content",
-        view_num: "112",
-        collect_num: "98",
-      }
-    ];
+    // console.log("onload");
+    
     this.setData({
-      posts_key:posts_content
+      posts_key:postsData.postList
     });
   },
 
@@ -51,7 +33,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("onReady");
+    // console.log("onReady");
   
   },
 
@@ -59,7 +41,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("onShow");
+    // console.log("onShow");
   
   },
 
@@ -67,7 +49,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("onHide");
+    // console.log("onHide");
   
   },
 
@@ -75,7 +57,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("onUnload");
+    // console.log("onUnload");
   
   },
 
