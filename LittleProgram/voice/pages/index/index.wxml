@@ -3,11 +3,12 @@
   <view class='header'>
     <view class="userinfo">
       <!-- <image class="header-logo" src="/resource/images/logo.png"></image> -->
-      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <block wx:else>
+      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else> -->
         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
+        <text class='header-desc'>欢迎来到第六音 开启你的声音之旅</text>
+      <!-- </block> -->
     </view>
   </view>
   <view class="container">
