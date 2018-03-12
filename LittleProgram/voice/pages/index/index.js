@@ -2,6 +2,9 @@
 //获取应用实例
 const app = getApp()
 var menuList = require('../../data/menu_list.js')
+var qcloud = require('../../vendor/wafer2-client-sdk/index')
+var config = require('../../config')
+var util = require('../../utils/util.js')
 
 Page({
 
@@ -22,7 +25,6 @@ Page({
     this.setData({
       menuList: menuList.local_menu_list
     });
-    console.log(this.data.menuList);
 
     if (app.globalData.userInfo) {
       this.setData({
@@ -50,21 +52,74 @@ Page({
         }
       })
     }
-    // wx.getUserInfo({
-    //   withCredentials: true,
-    //   lang: '',
-    //   success: function(res) {
-    //     var userInfo = res.userInfo;
-    //     that.setData({
-    //       userInfo: userInfo
-    //     });
-    //     console.log(userInfo);
-    //   },
-    //   fail: function(res) {},
-    //   complete: function(res) {},
+    this.login();
+    // 做登录开发的时候，如果你已经获取到了code，接下来获取session_key的时候。你需要将code传到你自己的服务器，然后在你自己的服务器请求session_key，而不是在小程序内部直接请求微信的url获取session_key。
+    // wx.login({
+    //   //获取code
+    //   success: function (res) {
+    //     var code = res.code; //返回code
+    //     console.log(code);
+    //     var appId = 'wx71aafc68f6c46172';
+    //     var secret = 'b1c36aeec83b253e988b3112cad06650';
+    //     wx.request({
+    //       url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + code + '&grant_type=authorization_code',
+    //       data: {},
+    //       header: {
+    //         'content-type': 'json'
+    //       },
+    //       success: function (res) {
+    //         var openid = res.data.openid //返回openid
+    //         console.log('openid为' + openid);
+    //       }
+    //     })
+    //   }
     // })
   },
 
+  login: function () {
+    if (this.data.logged) return
+    
+    qcloud.setLoginUrl(config.loginUrl)
+
+    util.showBusy('正在登录')
+    var that = this
+
+    // 调用登录接口
+    qcloud.login({
+      success(result) {
+        if (result) {
+          util.showSuccess('登录成功')
+          that.setData({
+            userInfo: result,
+            logged: true
+          })
+        } else {
+          // 如果不是首次登录，不会返回用户信息，请求用户信息接口获取
+          qcloud.request({
+            url: config.service.requestUrl,
+            login: true,
+            success(result) {
+              util.showSuccess('登录成功')
+              that.setData({
+                userInfo: result.data.data,
+                logged: true
+              })
+            },
+
+            fail(error) {
+              util.showModel('请求失败', error)
+              console.log('request fail', error)
+            }
+          })
+        }
+      },
+
+      fail(error) {
+        util.showModel('登录失败', error)
+        console.log('登录失败', error)
+      }
+    })
+  },
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
