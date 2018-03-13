@@ -1,4 +1,4 @@
-package com.joshua.voice.web;
+package com.joshua.voice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

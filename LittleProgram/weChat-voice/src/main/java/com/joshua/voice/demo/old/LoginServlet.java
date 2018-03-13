@@ -4,6 +4,8 @@ import com.joshua.voice.wafer.ConfigurationException;
 import com.joshua.voice.wafer.authorization.LoginService;
 import com.joshua.voice.wafer.authorization.LoginServiceException;
 import com.joshua.voice.wafer.authorization.UserInfo;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/login")
+//@Controller    // This means that this class is a Controller
+//@RequestMapping(path="/logintest")
 public class LoginServlet extends HttpServlet {
        
 	private static final long serialVersionUID = 6585319986631669934L;
