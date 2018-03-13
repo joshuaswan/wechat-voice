@@ -10,8 +10,6 @@ import static org.junit.Assert.*;
 /**
  * Created by joshua on 2018/3/13.
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
 public class SpringDemoGradleApplicationTest {
 
     @Test
