@@ -2,10 +2,9 @@ package com.joshua.voice.entity;
 
 import org.hibernate.validator.constraints.UniqueElements;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 public class UserInfo {
@@ -31,12 +30,26 @@ public class UserInfo {
 
     private String avatarUrl;
 
-    public Integer getId() {
-        return id;
+    private Integer isSystem;
+
+    @OneToMany(mappedBy = "id")
+    private Set<Voice> voices = new HashSet<>();
+
+    public UserInfo() {
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public UserInfo(@UniqueElements String openId, String nickName, Integer gender, String language, String city,
+                    String province, String country, String avatarUrl, Integer isSystem, Set<Voice> voices) {
+        this.openId = openId;
+        this.nickName = nickName;
+        this.gender = gender;
+        this.language = language;
+        this.city = city;
+        this.province = province;
+        this.country = country;
+        this.avatarUrl = avatarUrl;
+        this.isSystem = isSystem;
+        this.voices = voices;
     }
 
     public String getOpenId() {

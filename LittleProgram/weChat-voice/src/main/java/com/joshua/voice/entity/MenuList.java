@@ -18,7 +18,7 @@ public class MenuList {
 
     private String pages;
 
-    private String image;
+    private String icon;
 
     public Integer getId() {
         return id;
@@ -52,11 +52,21 @@ public class MenuList {
         this.pages = pages;
     }
 
-    public String getImage() {
-        return image;
+    public String getIcon() {
+        return icon;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public MenuList() {
+    }
+
+    public MenuList(String name, String title, String pages, String icon) {
+        this.name = name;
+        this.title = title;
+        this.pages = pages;
+        this.icon = icon;
     }
 }

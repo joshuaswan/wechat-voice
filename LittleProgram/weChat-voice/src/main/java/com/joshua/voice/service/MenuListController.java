@@ -14,10 +14,10 @@ public class MenuListController {
 
     @PostMapping(path = "/add")
     public @ResponseBody String addNewMenu(@RequestParam String name,@RequestParam String title,
-                        @RequestParam String pages, @RequestParam String image){
+                        @RequestParam String pages, @RequestParam String icon){
         MenuList menu = new MenuList();
         menu.setTitle(title);
-        menu.setImage(image);
+        menu.setIcon(icon);
         menu.setPages(pages);
         menu.setName(name);
         menuListRepository.save(menu);
