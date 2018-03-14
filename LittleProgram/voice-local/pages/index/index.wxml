@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class='index'>
+  <view class='header'>
+    <view class="userinfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <text class='header-desc'>欢迎来到第六音 开启你的声音之旅</text>
+    </view>
+  </view>
+  <view class="container">
+    <block wx:for-items="{{menuList}}" wx:key="{{item.id}}">
+      <view class='menu-block'>
+        <navigator class='menu-list' url="{{item.pages}}">
+          <image class='menu-image' src='{{item.image}}'></image>
+          <text class='menu-text'>{{item.name}}</text>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <view class='foot'>
+  </view>
+</view>

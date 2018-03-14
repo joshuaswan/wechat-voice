@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/voiceSquare/voiceSquare",
+    "pages/dubRoom/dubRoom",
+    "pages/dubLesson/dubLesson",
+    "pages/practicingRoom/practicingRoom",
+    "pages/myVoice/myVoice",
+    "pages/myMaterial/myMaterial"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#7fc7d5",
+    "navigationBarBackgroundColor": "#7fc7d5",
+    "navigationBarTitleText": "第六音",
+    "navigationBarTextStyle": "black"
+  }
+}
