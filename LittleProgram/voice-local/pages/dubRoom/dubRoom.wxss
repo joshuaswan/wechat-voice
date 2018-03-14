@@ -1,0 +1,19 @@
+/* pages/dubRoom/dubRoom.wxss */
+
+.start-record{
+  width: 200rpx;
+  height: 100rpx;
+  border: solid black 2px;
+}
+
+.stop-record{
+  width: 200rpx;
+  height: 100rpx;
+  border: solid black 2px;
+}
+
+.test-voice{
+  width: 200rpx;
+  height: 100rpx;
+  border: solid black 2px;
+}
