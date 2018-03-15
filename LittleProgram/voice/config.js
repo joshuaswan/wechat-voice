@@ -5,7 +5,7 @@
 // 此处主机域名是腾讯云解决方案分配的域名
 // 小程序后台服务解决方案：https://www.qcloud.com/solution/la
 
-var host = "joshuaswan.club"
+var host = "579319346.joshuaswan.club"
 
 var config = {
 

@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 /**
  * Created by joshua on 2018/3/13.
  */
-public class SpringDemoGradleApplicationTest {
+public class VoiceApplicationTest {
 
     @Test
     public void contextLoads() {

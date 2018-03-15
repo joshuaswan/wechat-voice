@@ -1,6 +1,8 @@
 package com.joshua.voice.entity;
 
 import org.hibernate.validator.constraints.UniqueElements;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -13,7 +15,6 @@ public class UserInfo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @UniqueElements
     private String openId;
 
     private String nickName;
@@ -35,10 +36,28 @@ public class UserInfo {
     @OneToMany(mappedBy = "id")
     private Set<Voice> voices = new HashSet<>();
 
+    static UserInfo BuildFromJson(JSONObject json) {
+        if (json == null) return null;
+
+        UserInfo userInfo = new UserInfo();
+        try {
+            if (json.has("openId")) userInfo.openId = json.getString("openId");
+            if (json.has("nickName")) userInfo.nickName = json.getString("nickName");
+            if (json.has("avatarUrl")) userInfo.avatarUrl = json.getString("avatarUrl");
+            if (json.has("gender")) userInfo.gender = json.getInt("gender");
+            if (json.has("language")) userInfo.language = json.getString("language");
+            if (json.has("city")) userInfo.city = json.getString("city");
+            if (json.has("province")) userInfo.province = json.getString("province");
+            if (json.has("country")) userInfo.country = json.getString("country");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return userInfo;
+    }
     public UserInfo() {
     }
 
-    public UserInfo(@UniqueElements String openId, String nickName, Integer gender, String language, String city,
+    public UserInfo(String openId, String nickName, Integer gender, String language, String city,
                     String province, String country, String avatarUrl, Integer isSystem, Set<Voice> voices) {
         this.openId = openId;
         this.nickName = nickName;

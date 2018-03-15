@@ -5,6 +5,7 @@
     "pages/voiceSquare/voiceSquare",
     "pages/dubRoom/dubRoom",
     "pages/dubLesson/dubLesson",
+    "pages/voiceMessage/voiceMessage",
     "pages/practicingRoom/practicingRoom",
     "pages/myVoice/myVoice",
     "pages/myMaterial/myMaterial"

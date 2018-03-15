@@ -5,7 +5,7 @@
 // 此处主机域名是腾讯云解决方案分配的域名
 // 小程序后台服务解决方案：https://www.qcloud.com/solution/la
 
-var host = "localhost:8080"
+var host = "localhost:8080//wechat/user"
 
 var config = {
 
@@ -13,28 +13,28 @@ var config = {
   host,
 
   // 登录地址，用于建立会话
-  loginUrl: `https://${host}/login`,
+  loginUrl: `http://${host}/login`,
 
   // 测试的请求地址，用于测试会话
-  requestUrl: `https://${host}/testRequest`,
+  requestUrl: `http://${host}/testRequest`,
 
   // 用code换取openId
-  openIdUrl: `https://${host}/openid`,
+  openIdUrl: `http://${host}/openid`,
 
   // 测试的信道服务接口
-  tunnelUrl: `https://${host}/tunnel`,
+  tunnelUrl: `http://${host}/tunnel`,
 
   // 生成支付订单的接口
-  paymentUrl: `https://${host}/payment`,
+  paymentUrl: `http://${host}/payment`,
 
   // 发送模板消息接口
-  templateMessageUrl: `https://${host}/templateMessage`,
+  templateMessageUrl: `http://${host}/templateMessage`,
 
   // 上传文件接口
-  uploadFileUrl: `https://${host}/upload`,
+  uploadFileUrl: `http://${host}/upload`,
 
   // 下载示例图片接口
-  downloadExampleUrl: `https://${host}/static/weapp.jpg`
+  downloadExampleUrl: `http://${host}/static/weapp.jpg`
 };
 
 module.exports = config

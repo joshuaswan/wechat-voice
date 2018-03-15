@@ -1,2 +1,4 @@
 <!--pages/voiceSquare/voiceSquare.wxml-->
-<text>pages/voiceSquare/voiceSquare.wxml</text>
+<view>
+主题列表
+</view>

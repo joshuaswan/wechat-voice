@@ -1,4 +1,4 @@
-package com.joshua.voice.service;
+package com.joshua.voice.controller;
 
 import com.joshua.voice.bean.MenuListRepository;
 import com.joshua.voice.entity.MenuList;

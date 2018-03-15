@@ -52,8 +52,8 @@ Page({
         }
       })
     }
-    this.getUserInfo();
-    // this.login();
+    // this.getUserInfo();
+    this.login();
     // 做登录开发的时候，如果你已经获取到了code，接下来获取session_key的时候。你需要将code传到你自己的服务器，然后在你自己的服务器请求session_key，而不是在小程序内部直接请求微信的url获取session_key。
     // wx.login({
     //   //获取code

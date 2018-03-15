@@ -1,4 +1,4 @@
-package com.joshua.voice.service;
+package com.joshua.voice.controller;
 
 import com.joshua.voice.bean.UserInfoRepository;
 import com.joshua.voice.entity.UserInfo;
@@ -27,6 +27,11 @@ public class UserInfoController {
     @GetMapping(path = "all")
     public @ResponseBody Iterable<UserInfo> getAllUserInfo(){
         return userInfoRepository.findAll();
+    }
+
+    @GetMapping(path = "test")
+    public String userTest(){
+        return userInfoRepository.toString();
     }
 
 }
