@@ -30,7 +30,7 @@ public class UserInfoController {
     }
 
     @GetMapping(path = "test")
-    public String userTest(){
+    public @ResponseBody String userTest(){
         return userInfoRepository.toString();
     }
 
