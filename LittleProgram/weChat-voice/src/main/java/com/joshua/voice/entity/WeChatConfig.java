@@ -11,16 +11,18 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix = "wechat")
 public class WeChatConfig {
 
-    private String appid;
+    private String appId;
 
     private String secret;
 
-    public String getAppid() {
-        return appid;
+    private String imagePath;
+
+    public String getAppId() {
+        return appId;
     }
 
-    public void setAppid(String appid) {
-        this.appid = appid;
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 
     public String getSecret() {
@@ -31,11 +33,20 @@ public class WeChatConfig {
         this.secret = secret;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
     @Override
     public String toString() {
         return "WeChatConfig{" +
-                "appid='" + appid + '\'' +
+                "appId='" + appId + '\'' +
                 ", secret='" + secret + '\'' +
+                ", imagePath='" + imagePath + '\'' +
                 '}';
     }
 }

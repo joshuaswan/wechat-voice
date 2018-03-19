@@ -7,5 +7,7 @@ spring:
     hibernate:
       ddl-auto: update
 wechat:
-  appid: wx71aafc68f6c46172
+  appId: wx71aafc68f6c46172
   secret: b1c36aeec83b253e988b3112cad06650
+  imagePath: D:\workspace\wechat-voice\resources\imageUpload
+#  imagepath: /root/images

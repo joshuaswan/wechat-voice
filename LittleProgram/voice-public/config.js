@@ -2,7 +2,7 @@
  * 小程序配置文件
  */
 
-var host = 'http://localhost:8080';
+var host = 'https://joshuaswan.club';
 
 var config = {
 

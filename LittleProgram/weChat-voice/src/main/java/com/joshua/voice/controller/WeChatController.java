@@ -43,7 +43,7 @@ public class WeChatController {
             throw new LoginException("对应code信息为空");
         } else {
             StringBuilder apiUrl = new StringBuilder();
-            apiUrl.append(API_URL_PRE).append("appid=").append(weChatConfig.getAppid()).
+            apiUrl.append(API_URL_PRE).append("appid=").append(weChatConfig.getAppId()).
                     append("&secret=").append(weChatConfig.getSecret()).append("&js_code=").append(code);
             RestTemplate restTemplate = new RestTemplate();
             String result = restTemplate.getForObject(apiUrl.toString(), String.class);

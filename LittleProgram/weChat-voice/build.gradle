@@ -25,6 +25,9 @@ repositories {
     maven { url "https://repo.spring.io/milestone" }
 }
 
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
 
 ext {
     springCloudVersion = 'Finchley.M8'
@@ -40,6 +43,7 @@ dependencies {
     compile('org.springframework.session:spring-session-core')
     compile("org.springframework.boot:spring-boot-configuration-processor")
     compile group: 'org.json', name: 'json', version: '20180130'
+    compile group: 'org.springframework.hateoas', name: 'spring-hateoas', version: '0.24.0.RELEASE'
     runtime('org.springframework.boot:spring-boot-devtools')
     runtime('mysql:mysql-connector-java')
     testCompile('org.springframework.boot:spring-boot-starter-test')

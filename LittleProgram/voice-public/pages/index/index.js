@@ -39,9 +39,9 @@ Page({
     })
   },
 
-  createUser: function (openid) {
+  createUser: function (res) {
     var userInfo = this.data.userInfo;
-    userInfo.openid = openid
+    userInfo.openid = res.openId;
     wx.request({
       url: config.service.createUserUrl,
       header: {
