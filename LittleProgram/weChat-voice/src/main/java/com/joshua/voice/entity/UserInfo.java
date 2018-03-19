@@ -5,6 +5,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,6 +34,8 @@ public class UserInfo {
 
     private Integer isSystem;
 
+    private Date createTime;
+
     @OneToMany(mappedBy = "id")
     private Set<Voice> voices = new HashSet<>();
 
@@ -57,8 +60,7 @@ public class UserInfo {
     public UserInfo() {
     }
 
-    public UserInfo(String openId, String nickName, Integer gender, String language, String city,
-                    String province, String country, String avatarUrl, Integer isSystem, Set<Voice> voices) {
+    public UserInfo(String openId, String nickName, Integer gender, String language, String city, String province, String country, String avatarUrl, Integer isSystem, Date createTime) {
         this.openId = openId;
         this.nickName = nickName;
         this.gender = gender;
@@ -68,7 +70,7 @@ public class UserInfo {
         this.country = country;
         this.avatarUrl = avatarUrl;
         this.isSystem = isSystem;
-        this.voices = voices;
+        this.createTime = createTime;
     }
 
     public String getOpenId() {
@@ -133,5 +135,38 @@ public class UserInfo {
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Integer getIsSystem() {
+        return isSystem;
+    }
+
+    public void setIsSystem(Integer isSystem) {
+        this.isSystem = isSystem;
+    }
+
+    @Override
+    public String toString() {
+        return "UserInfo{" +
+                "id=" + id +
+                ", openId='" + openId + '\'' +
+                ", nickName='" + nickName + '\'' +
+                ", gender=" + gender +
+                ", language='" + language + '\'' +
+                ", city='" + city + '\'' +
+                ", province='" + province + '\'' +
+                ", country='" + country + '\'' +
+                ", avatarUrl='" + avatarUrl + '\'' +
+                ", isSystem=" + isSystem +
+                ", voices=" + voices +
+                '}';
     }
 }

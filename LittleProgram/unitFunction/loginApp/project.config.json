@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.91",
 	"appid": "wx71aafc68f6c46172",
-	"projectname": "voice",
+	"projectname": "loginApp",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

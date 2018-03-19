@@ -52,29 +52,32 @@ Page({
         }
       })
     }
-    this.login();
-    // 做登录开发的时候，如果你已经获取到了code，接下来获取session_key的时候。你需要将code传到你自己的服务器，然后在你自己的服务器请求session_key，而不是在小程序内部直接请求微信的url获取session_key。
-    // wx.login({
-    //   //获取code
-    //   success: function (res) {
-    //     var code = res.code; //返回code
-    //     console.log(code);
-    //     var appId = 'wx71aafc68f6c46172';
-    //     var secret = 'b1c36aeec83b253e988b3112cad06650';
-    //     wx.request({
-    //       url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + code + '&grant_type=authorization_code',
-    //       data: {},
-    //       header: {
-    //         'content-type': 'json'
-    //       },
-    //       success: function (res) {
-    //         var openid = res.data.openid //返回openid
-    //         console.log('openid为' + openid);
-    //       }
-    //     })
-    //   }
-    // })
+    wx.request({
+      url: 'http://localhost:8080/wechat/login',
+      
+    })
+    wx.login({
+      success: function (res) {
+        if (res.code) {
+          wx.request({
+            url: 'http://localhost:8080/wechat/login',
+            data: {
+              code: res.code
+            }
+          })
+          if(res.code == "nulluser"){
+            console.log("the user is not exist!")
+          }
+        }
+        else {
+          console.log("登陆失败！" + res.errMsg);
+        }
+        console.log(res.code);
+      }
+    })
   },
+
+
 
   login: function () {
     if (this.data.logged) return
