@@ -2,15 +2,17 @@
  * 小程序配置文件
  */
 
-var host = "joshuaswan.club"
+var host = 'http://localhost:8080';
 
 var config = {
 
-  host,
+  service: {
+    host,
 
-  loginUrl: "https://${host}/login",
+    loginUrl: `${host}/wechat/login`,
 
-  createUserUrl: "",
+    createUserUrl: `${host}/userinfo/create`
+  }
+};
 
-  
-}
+module.exports = config;

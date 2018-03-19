@@ -1,0 +1,9 @@
+/* pages/createTheme/createTheme.wxss */
+.input-body{
+  display: flex;
+  flex: colume;
+}
+
+input{
+  border-style: solid dotted dashed double;
+}

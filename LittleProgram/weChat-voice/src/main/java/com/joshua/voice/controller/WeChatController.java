@@ -36,17 +36,12 @@ public class WeChatController {
     @Autowired
     public UserInfoRepository userInfoRepository;
 
-    @GetMapping(path = "test")
-    public @ResponseBody String loginTest(@RequestParam String test){
-        logger.info("the param of get request " + test);
-        return test;
-    }
-
     @GetMapping(path = "login")
-    public @ResponseBody String login(@RequestParam String code) throws LoginException {
-        if (code == null || code.isEmpty()){
+    public @ResponseBody
+    Login login(@RequestParam String code) throws LoginException {
+        if (code == null || code.isEmpty()) {
             throw new LoginException("对应code信息为空");
-        }else {
+        } else {
             StringBuilder apiUrl = new StringBuilder();
             apiUrl.append(API_URL_PRE).append("appid=").append(weChatConfig.getAppid()).
                     append("&secret=").append(weChatConfig.getSecret()).append("&js_code=").append(code);
@@ -54,15 +49,7 @@ public class WeChatController {
             String result = restTemplate.getForObject(apiUrl.toString(), String.class);
             Login login = JSON.parseObject(result, Login.class);
             logger.info(login.toString());
-            Optional<UserInfo> userInfo = userInfoRepository.findByOpenId(login.getOpenId());
-            if (userInfo.isPresent()){
-                logger.info(userInfo.toString()+"------------");
-            }else {
-                logger.info("this user is not exist");
-                return login.getOpenId();
-            }
-            logger.info(login.getOpenId() + "-----" + login.getSessionKey());
-            return "success";
+            return login;
         }
     }
 }

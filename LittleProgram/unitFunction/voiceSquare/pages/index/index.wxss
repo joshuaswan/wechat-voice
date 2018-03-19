@@ -1,0 +1,46 @@
+.header {
+  height: 85rpx;
+  background-color: black;
+  display: flex;
+  flex: row;
+}
+
+.icon-tips-jia::before {
+  content: "\e605";
+  box-sizing: inherit;
+}
+
+.add-theme {
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  display: block;
+  position: relative;
+  margin: 5px 5px;
+}
+
+.add-theme:before, .add-theme:after {
+  content: '';
+  height: 6px;
+  width: 30px;
+  display: block;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  position: absolute;
+  top: 12px;
+  left: 0px;
+}
+
+.add-theme:after {
+  height: 30px;
+  width: 6px;
+  top: 0;
+  left: 12px;
+}

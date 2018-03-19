@@ -1,0 +1,13 @@
+<view class='input-body'>
+  <view>
+    <view>主题</view>
+    <input></input>
+  </view>
+  <view>
+    <view>内容</view>
+    <input></input>
+  </view>
+  <view>
+  上传背景图片
+  </view>
+</view>

@@ -1,4 +1,8 @@
 // pages/index/index.js
+//获取应用实例
+const app = getApp()
+var config = require('../../config')
+
 Page({
 
   /**
@@ -9,25 +13,21 @@ Page({
   },
 
   onLogin: function (res) {
-    console.log("start login");
     var that = this;
     wx.login({
       success: function (res) {
         if (res.code) {
           wx.request({
-            url: 'http://localhost:8080/wechat/login',
+            url: config.service.loginUrl,
             data: {
               code: res.code
             },
             success: function (res) {
               if (res.statusCode == 200) {
-                console.log("login success and the response is ")
                 console.log(res)
-                if (res.data.indexOf("success") >= 0) {
-                  console.log("login success")
-                } else {
-                  that.createUser(res.data)
-                }
+                wx.setStorageSync("openid", res.data.openId)
+                wx.setStorageSync("sessionKey", res.data.sessionKey)
+                that.createUser(res.data)
               }
             }
           })
@@ -35,17 +35,15 @@ Page({
         else {
           console.log("登陆失败！" + res.errMsg);
         }
-        console.log(res.code);
       }
     })
   },
 
   createUser: function (openid) {
     var userInfo = this.data.userInfo;
-    userInfo.openid=openid
-    console.log("no user")
+    userInfo.openid = openid
     wx.request({
-      url: 'http://localhost:8080/userinfo/create',
+      url: config.service.createUserUrl,
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
@@ -58,10 +56,10 @@ Page({
   },
 
   onGetUserInfo: function (res) {
-    console.log("start get user info");
     wx.getUserInfo({
       success: res => {
-        console.log("start system getUserInfo,and res is " + res)
+        wx.setStorageSync("userInfo", res.userInfo);
+        wx.setStorageSync("hasUserInfo", true)
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true

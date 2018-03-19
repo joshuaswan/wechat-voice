@@ -29,6 +29,9 @@ public class VoiceTheme {
     @OneToMany(mappedBy = "id")
     private Set<Voice> voices = new HashSet<>();
 
+    @OneToMany(mappedBy = "id")
+    private Set<VoiceImages> images = new HashSet<>();
+
     public VoiceTheme() {
     }
 
