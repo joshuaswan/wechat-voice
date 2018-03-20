@@ -1,6 +1,67 @@
-/* pages/index/index.wxss */
-.login-button{
-  border: solid 2px salmon;
+/**index.wxss**/
+
+.header-desc {
+  margin-top: 20rpx;
+  color: #888;
+  font-size: 28rpx;
+}
+
+.header-logo {
+  width: 86rpx;
+  height: 86rpx;
+}
+
+page {
+  background: #7fc7d5;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-block {
+  width: 300rpx;
+}
+
+.menu-list {
+  width: 300rpx;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-image {
   width: 200rpx;
-  height: 100rpx;
+  height: 200rpx;
+}
+
+.menu-text {
+  font-size: 16px;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.header {
+  height: 20%;
+  padding: 80rpx;
+  text-align: center;
 }

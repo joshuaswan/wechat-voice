@@ -1,6 +1,0 @@
-/* pages/index/index.wxss */
-.login-button{
-  border: solid 2px salmon;
-  width: 200rpx;
-  height: 100rpx;
-}

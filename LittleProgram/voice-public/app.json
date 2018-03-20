@@ -1,13 +1,13 @@
 {
   "pages": [
-    "pages/index/index"
+
+    "pages/createTheme/createTheme"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "第六音",
-    "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
+    "backgroundColor": "#7fc7d5",
+    "navigationBarBackgroundColor": "#7fc7d5",
+    "navigationBarTitleText": "第六音",
+    "navigationBarTextStyle": "black"
   }
 }

@@ -34,6 +34,8 @@ public class Voice {
 
     private Integer isAudit;
 
+    private Integer lenght;
+
     @OneToMany(mappedBy = "id")
     private Set<LikeList> likes = new HashSet<>();
 

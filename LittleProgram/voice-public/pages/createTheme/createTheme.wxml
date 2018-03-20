@@ -1,0 +1,21 @@
+<view class='input-body'>
+  <view>
+    <view class="viewTitle">
+      <text class="view-Name">主题</text>
+    </view>
+      <input bindinput='titleInput'></input>
+  </view>
+  <view>
+    <view class="viewTitle">
+      <text class="view-Name">内容</text>
+    </view>
+    <textarea bindinput='contentInput'></textarea>
+  </view>
+
+  <view class="button" bindtap='onUploadImage'>
+    <text class='button-text'>上传背景图片</text>
+  </view>
+  <view class="bottom button">
+    <text class='button-text'>创建主题</text>
+  </view>
+</view>

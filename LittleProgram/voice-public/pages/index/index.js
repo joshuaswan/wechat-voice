@@ -68,12 +68,25 @@ Page({
     })
   },
 
+  onGetMenuList: function(res){
+    var that = this;
+    wx.request({
+      url: config.service.getMenuListUrl,
+      success:function(res){
+        console.log(res.data);
+        that.setData({
+          menuList:res.data
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.onGetUserInfo()
+    this.onGetUserInfo();
     this.onLogin();
+    this.onGetMenuList();
   },
 
   /**

@@ -1,7 +1,0 @@
-<!-- pages/index/index.wxml
-<view catchtap='onGetUserInfo' class='login-button'>获取用户信息</view>
-
-<view>{{userInfo.nickName}}</view>
-<image src='{{userInfo.avatarUrl}}'></image>
-
-<view class='login-button' catchtap='onLogin'>登陆</view> -->
