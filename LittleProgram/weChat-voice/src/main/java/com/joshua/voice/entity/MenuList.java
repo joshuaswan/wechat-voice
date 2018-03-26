@@ -20,6 +20,8 @@ public class MenuList {
 
     private String icon;
 
+    private Integer orderNum;
+
     public Integer getId() {
         return id;
     }
@@ -63,10 +65,19 @@ public class MenuList {
     public MenuList() {
     }
 
-    public MenuList(String name, String title, String pages, String icon) {
+    public MenuList(String name, String title, String pages, String icon, Integer orderNum) {
         this.name = name;
         this.title = title;
         this.pages = pages;
         this.icon = icon;
+        this.orderNum = orderNum;
+    }
+
+    public Integer getOrderNum() {
+        return orderNum;
+    }
+
+    public void setOrderNum(Integer orderNum) {
+        this.orderNum = orderNum;
     }
 }

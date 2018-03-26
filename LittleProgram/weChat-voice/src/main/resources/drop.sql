@@ -1,0 +1,9 @@
+drop table menu_list;
+drop table hibernate_sequence;
+drop table voice_images;
+drop table down_list;
+drop table like_list;
+drop table voice;
+drop table user_info;
+drop table voice_theme;
+drop table theme_type;

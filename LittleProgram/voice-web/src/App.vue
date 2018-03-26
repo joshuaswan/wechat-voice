@@ -1,13 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <div>
+      <button v-on:click="test"></button>
+    </div>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+      return {
+          message:"hello Vue!"
+      }
+  },
+  methods:{
+    test: function (res) {
+      console.log("test");
+    }
+  }
 }
 </script>
 
