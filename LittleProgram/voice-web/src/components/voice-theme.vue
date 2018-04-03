@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>voice</p>
+    <p>voice-theme</p>
   </div>
 </template>
 
@@ -14,7 +14,3 @@
     components: {}
   }
 </script>
-
-<style scoped>
-  /*@import '/static/bootstrap/css/bootstrap.min.css';*/
-</style>

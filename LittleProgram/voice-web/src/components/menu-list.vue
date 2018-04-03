@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p>voice</p>
+    <p>menu-list</p>
+    <table>
+
+    </table>
   </div>
 </template>
 
@@ -14,7 +17,3 @@
     components: {}
   }
 </script>
-
-<style scoped>
-  /*@import '/static/bootstrap/css/bootstrap.min.css';*/
-</style>

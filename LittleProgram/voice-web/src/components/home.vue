@@ -1,20 +1,23 @@
 <template>
   <div>
-    <p>voice</p>
+    <div>{{home}}</div>
   </div>
+
+
 </template>
 
 <script>
   export default {
-    name: '',
+    name: 'home',
     data () {
       return {
+        home: 'home',
+        test: 'test'
       }
     },
     components: {}
   }
 </script>
 
-<style scoped>
-  /*@import '/static/bootstrap/css/bootstrap.min.css';*/
+<style>
 </style>
