@@ -32,6 +32,8 @@
 </script>
 
 <style>
+  @import "style/css/bootstrap.css";
+
   .text-center {
     text-align: center;
   }

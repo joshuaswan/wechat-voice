@@ -3,8 +3,7 @@ package com.joshua.voice.controller;
 import com.alibaba.fastjson.JSON;
 import com.joshua.voice.bean.UserInfoRepository;
 import com.joshua.voice.dao.Login;
-import com.joshua.voice.entity.UserInfo;
-import com.joshua.voice.entity.WeChatConfig;
+import com.joshua.voice.config.WeChatConfig;
 import com.joshua.voice.exception.LoginException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.Optional;
 
 
 /**

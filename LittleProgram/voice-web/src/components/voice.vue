@@ -15,6 +15,6 @@
   }
 </script>
 
-<style scoped>
-  /*@import '/static/bootstrap/css/bootstrap.min.css';*/
+<style>
+
 </style>
